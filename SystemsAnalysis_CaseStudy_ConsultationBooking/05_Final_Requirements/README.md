@@ -1,8 +1,8 @@
 # Deliverable 05 – Final Requirements: Instructor Consultation Booking System
 
-**Author:** Md Alamgir Hossain · October 2026 · *Illustrative case study: the stakeholder and all figures are fictional.*
+**Author:** Md Alamgir Hossain · October 2026 · *Illustrative case study: Walter Dvorak is the course instructor who acted as stakeholder. The interview answers and all figures here are illustrative examples prepared by the student team, not his actual statements.*
 
-These are the final requirements for the Instructor Consultation Booking System, the input for the team's GUI prototype (Deliverable 08). They are based on an illustrative stakeholder scenario.
+These are the final requirements for the Instructor Consultation Booking System, the input for the team's GUI prototype (Deliverable 08). They are based on an illustrative scenario.
 
 ## 1. Purpose and scope
 
@@ -10,9 +10,9 @@ The system lets students and project groups book consultations with an instructo
 
 - **System:** Instructor Consultation Booking System
 
-- **Requestor and primary user:** Alex Morgan, Instructor, Business Information Systems (fictional stakeholder)
+- **Requestor and primary user:** Walter Dvorak, Instructor, Business Information Systems
 
-- **Other users:** Students and project groups in Alex's course sections (about 120–150 a term)
+- **Other users:** Students and project groups in Walter's course sections (about 120–150 a term)
 
 - **Business objective:** Cut instructor scheduling time by 3–4 hours a week, reduce missed meetings and keep a record of every consultation
 
@@ -42,7 +42,7 @@ The requirements come from two techniques, which meets the assignment's "no less
 
 | Technique     | Who                                                | What it gave us                                                                 | Reference                                |
 |---------------|----------------------------------------------------|---------------------------------------------------------------------------------|------------------------------------------|
-| Interview     | Alex Morgan (30 min, during class time) | Duties, current systems, pain points, must-have and nice-to-have features       | Deliverable 03, interview summary Q1–Q10 |
+| Interview     | Walter Dvorak (30 min, during class time) | Duties, current systems, pain points, must-have and nice-to-have features       | Deliverable 03, interview summary Q1–Q10 |
 | Questionnaire | 30 students                                        | 80% find email booking slow; 70% prefer self-booking; 60% have missed a meeting | Deliverable 03, questionnaire results    |
 
 In the tables below, the **Source** column points back to these: "INT-Q6" means interview question 6, and "QST" means the student questionnaire.
@@ -215,7 +215,7 @@ Screens S1–S6 cover all the Must-have requirements, so they are the minimum se
 
 - [ ] Should students be limited to a number of bookings per week?
 
-- [ ] Does Alex want walk-ins recorded in the system too?
+- [ ] Does Walter want walk-ins recorded in the system too?
 
 - [ ] Will IT Services allow Outlook and Teams integration?
 
@@ -225,13 +225,13 @@ The requirements were checked in two ways before being used for the prototype (C
 
 | Check            | Question                                                                         | How we did it                                                                                                        |
 |------------------|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| **Validation**   | Are the *correct* requirements stated? (Is this the system Alex really wants?) | Walk Alex through the user stories and the prototype screens, and ask him to sign off (section 12)                 |
+| **Validation**   | Are the *correct* requirements stated? (Is this the system Walter really wants?) | Walk Walter through the user stories and the prototype screens, and ask him to sign off (section 12)                 |
 | **Verification** | Are the requirements stated *correctly*? (Clear, testable, consistent?)          | Every requirement has an ID, a source and an acceptance criterion; the traceability table links each one to a screen |
 
 | Challenge (Chapter 4) | Risk here                                         | How we handle it                                                                                               |
 |-----------------------|---------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | Imprecision           | Vague wishes like "easy booking"                  | Measurable acceptance criteria (e.g., "book in under 2 minutes")                                               |
-| Agreement             | Alex and students may want different things     | Interview plus questionnaire; MoSCoW priorities agreed with Alex                                             |
+| Agreement             | Walter and students may want different things     | Interview plus questionnaire; MoSCoW priorities agreed with Walter                                             |
 | Creep                 | New features added late (e.g., other instructors) | Out-of-scope list and "Won't have (this release)" priority; scalability (NFR-09) keeps the door open for later |
 
 ## 11. Glossary of terms
@@ -247,7 +247,7 @@ Plain-language meanings of the technical terms and abbreviations used in this do
 | Exception report                | A report that shows only records needing attention, such as meetings marked as no-show.                                                                                                     |
 | FOIP                            | Saskatchewan's Freedom of Information and Protection of Privacy rules, which govern how public institutions collect, use and protect personal information such as student names and emails. |
 | FR / NFR                        | Functional requirement (what the system must do) / non-functional requirement (how well it must do it: speed, security, usability).                                                         |
-| INT-Q / QST                     | Source codes in this document: INT-Q6 = interview question 6 with Alex; QST = the student questionnaire.                                                                                  |
+| INT-Q / QST                     | Source codes in this document: INT-Q6 = interview question 6 with Walter; QST = the student questionnaire.                                                                                  |
 | Microsoft 365                   | The college's suite of Microsoft tools, including Outlook (email and calendar) and Teams (online meetings).                                                                                 |
 | MoSCoW                          | A way to prioritize requirements: **M**ust have, **S**hould have, **C**ould have, **W**on't have (this release).                                                                            |
 | No-show                         | A booked meeting the student or group did not attend without cancelling.                                                                                                                    |
@@ -270,7 +270,7 @@ The requirements are final once the user confirms them below.
 
 | Role             | Name                                    | Signature | Date |
 |------------------|-----------------------------------------|-----------|------|
-| User / requestor | Alex Morgan, Instructor BIS        |           |      |
+| User / requestor | Walter Dvorak, Instructor BIS        |           |      |
 | Prepared by      | Md Alamgir Hossain, project team |           |      |
 
 ---

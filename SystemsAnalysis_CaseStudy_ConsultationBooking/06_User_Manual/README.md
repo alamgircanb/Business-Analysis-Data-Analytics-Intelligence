@@ -1,6 +1,6 @@
 # Deliverable 06 – User Manual and Quick Reference: Instructor Consultation Booking System
 
-**Author:** Md Alamgir Hossain · October 2026 · *Illustrative case study: the stakeholder and all figures are fictional.*
+**Author:** Md Alamgir Hossain · October 2026 · *Illustrative case study: Walter Dvorak is the course instructor who acted as stakeholder. The interview answers and all figures here are illustrative examples prepared by the student team, not his actual statements.*
 
 This guide shows students how to book, change and cancel a consultation, and shows the instructor how to manage availability, meetings and notes. It is the user documentation for the GUI prototype (Deliverable 08), following the user documentation guidance in Chapter 11.
 
@@ -147,7 +147,7 @@ Print or pin this one-page summary.
 
 **Support**
 
-- Booking questions: Alex Morgan, alex.morgan@college.example
+- Booking questions: email Walter Dvorak (instructor) through your college account
 
 - Sign-in or account problems: the college IT Service Desk (see the college's IT support page)
 

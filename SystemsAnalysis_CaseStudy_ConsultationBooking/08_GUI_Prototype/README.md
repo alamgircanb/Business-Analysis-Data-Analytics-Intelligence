@@ -11,7 +11,7 @@ Click through the real flows:
 - **Student:** pick an open slot → **Book this slot** → fill in the form (try leaving the topic empty to see validation) → **Confirm booking** → **My bookings** → **Cancel booking** (with confirmation).
 - **Instructor** (switch with *View as* at the top): dashboard → **Open notes** → write notes and set the status → **Save notes**; change office hours and blocked dates in **Availability**; see the **No-show report** in **Reports**.
 
-The demo data is fictional and resets when you reload the page. Source: [`prototype/index.html`](prototype/index.html), a single HTML file.
+The demo data is illustrative and resets when you reload the page. Source: [`prototype/index.html`](prototype/index.html), a single HTML file.
 
 ## Before: the current process
 
@@ -70,7 +70,7 @@ The clickable prototype is one file, [`prototype/index.html`](prototype/index.ht
 
 `source/before_email_booking.html` produces the “before” image the same way.
 
-*The stakeholder and all data are fictional. Student names are the project teammates’ first names.
+*Stakeholder: Walter Dvorak (course instructor). Student names are the project teammates’ first names. All booking data is illustrative.*
 
 ---
 

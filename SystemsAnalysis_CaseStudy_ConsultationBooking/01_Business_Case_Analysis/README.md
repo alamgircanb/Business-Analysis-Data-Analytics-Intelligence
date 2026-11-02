@@ -1,18 +1,18 @@
 # Deliverable 01 – Business Case Analysis: Instructor Consultation Booking System
 
-**Author:** Md Alamgir Hossain · October 2026 · *Illustrative case study: the stakeholder and all figures are fictional.*
+**Author:** Md Alamgir Hossain · October 2026 · *Illustrative case study: Walter Dvorak is the course instructor who acted as stakeholder. The interview answers and all figures here are illustrative examples prepared by the student team, not his actual statements.*
 
 The business case supports building an Instructor Consultation Booking System. Email and paper-sheet booking costs the instructor about 3–4 hours a week, causes double-bookings and leaves no meeting record.
 
 ## 1. System request form
 
-The system request is the formal starting point of the project (Chapter 2). Alex submits it as the user and requestor.
+The system request is the formal starting point of the project (Chapter 2). Walter submits it as the user and requestor.
 
 | Field               | Entry                                                                                                                                                           |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Requestor           | Alex Morgan, Instructor BIS                                                                                                                                |
+| Requestor           | Walter Dvorak, Instructor BIS                                                                                                                                |
 | Department          | School of Business, Business Information Systems (BIS) program                                                                                    |
-| Contact             | alex.morgan@college.example                                                                                                                                          |
+| Contact             | By college email                                                                                                                                          |
 | Date submitted      | October 2026                                                                                                                                                    |
 | Title of request    | Instructor Consultation Booking System                                                                                                                          |
 | Type of request     | New system                                                                                                                                                      |
@@ -64,7 +64,7 @@ The system request is the formal starting point of the project (Chapter 2). Alex
 |-------------------------------------------------------------|------------------------------------------------------------------|
 | Strategic plan: the college's focus on student success    | Technology: cloud booking tools are now standard and low-cost    |
 | Top management: the program head must approve               | Suppliers: Microsoft provides Bookings, Outlook and Teams        |
-| User requests: Alex and the students want self-booking    | Customers: students expect self-service and mobile access        |
+| User requests: Walter and the students want self-booking    | Customers: students expect self-service and mobile access        |
 | IT department: IT Services must enable and support the tool | Competitors: students already self-book with many other services |
 | Existing systems: Microsoft 365, D2L Brightspace            | Economy: tight public budgets mean little or no new spending     |
 |                                                             | Government: FOIP privacy rules for student information           |
@@ -77,8 +77,8 @@ The team used CATWOE instead of SWOT, as the assignment requires. It looks at th
 
 | Element            | Meaning                     | For this system                                                                                           |
 |--------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------|
-| **C**ustomers      | Who benefits                | Students and project groups in Alex's sections (about 120–150 a term)                                   |
-| **A**ctors         | Who carries out the process | Alex (instructor); later other instructors; IT Services for support                                     |
+| **C**ustomers      | Who benefits                | Students and project groups in Walter's sections (about 120–150 a term)                                   |
+| **A**ctors         | Who carries out the process | Walter (instructor); later other instructors; IT Services for support                                     |
 | **T**ransformation | Input → output              | Booking requests by email or paper → confirmed, self-booked meetings with reminders and records           |
 | **W**orldview      | Why it matters              | Instructors should spend their time teaching and advising, not scheduling                                 |
 | **O**wner          | Who can approve or stop it  | BIS program, School of Business (program head)                                                         |
@@ -100,9 +100,9 @@ Most causes trace back to two gaps: there is no tool for students to book themse
 
 as-is booking process · 6 steps, 1 loop
 
-The email loop between Alex and the student is the main delay. Walk-ins bypass the calendar entirely, which causes double-bookings, and notes are often skipped, so there is no meeting record.
+The email loop between Walter and the student is the main delay. Walk-ins bypass the calendar entirely, which causes double-bookings, and notes are often skipped, so there is no meeting record.
 
-**Proposed (to-be) process:** Student signs in → picks an open slot → confirms → system sends confirmation and adds the meeting to Outlook with a Teams link → system sends a reminder 24 hours before → meeting held → Alex records notes and status. This removes the email loop and the paper sheet.
+**Proposed (to-be) process:** Student signs in → picks an open slot → confirms → system sends confirmation and adds the meeting to Outlook with a Teams link → system sends a reminder 24 hours before → meeting held → Walter records notes and status. This removes the email loop and the paper sheet.
 
 ---
 

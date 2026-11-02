@@ -1,6 +1,6 @@
 # Deliverable 02 – Feasibility Assessment: Instructor Consultation Booking System
 
-**Author:** Md Alamgir Hossain · October 2026 · *Illustrative case study: the stakeholder and all figures are fictional.*
+**Author:** Md Alamgir Hossain · October 2026 · *Illustrative case study: Walter Dvorak is the course instructor who acted as stakeholder. The interview answers and all figures here are illustrative examples prepared by the student team, not his actual statements.*
 
 The project is feasible. The recommended option, configuring Microsoft Bookings under the college's existing Microsoft 365 licence, pays back in about 8 months and can be live for the Winter 2027 term. All figures are illustrative estimates for the practice scenario.
 
@@ -21,12 +21,12 @@ The system is operationally feasible: both user groups want it, and it fits how 
 
 | Question (Chapter 2)                 | Finding                                                                                                                |
 |--------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| Does management support the project? | Yes. Alex is the requestor; the program head is expected to approve because it improves student service at low cost. |
-| Will users accept it?                | Yes. 70% of surveyed students prefer self-booking, and Alex asked for it (Deliverable 03).                           |
-| Will it change current procedures?   | Yes, for the better: the email loop and paper sheet are replaced. Alex keeps using Outlook and Teams.                |
+| Does management support the project? | Yes. Walter is the requestor; the program head is expected to approve because it improves student service at low cost. |
+| Will users accept it?                | Yes. 70% of surveyed students prefer self-booking, and Walter asked for it (Deliverable 03).                           |
+| Will it change current procedures?   | Yes, for the better: the email loop and paper sheet are replaced. Walter keeps using Outlook and Teams.                |
 | Is training needed?                  | Minimal. A one-page quick reference guide (Deliverable 06) and a 10-minute demo in class.                              |
 | Will performance improve?            | Yes. Booking time falls from 2–4 email rounds to one online step; reminders target fewer than 5% missed meetings.      |
-| Any resistance expected?             | Low. Some students may still email; Alex will reply with the booking link.                                           |
+| Any resistance expected?             | Low. Some students may still email; Walter will reply with the booking link.                                           |
 
 | Further question (Chapter 2)                         | Finding                                                                  |
 |------------------------------------------------------|--------------------------------------------------------------------------|
@@ -55,7 +55,7 @@ Option B is technically feasible with the college's existing technology, and it 
 | Further question (Chapter 2)                                           | Finding for Option B                                                                                                 |
 |------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | Does the platform have enough capacity for future needs (scalability)? | Yes. Microsoft 365 already serves the whole college, so the system could grow to other instructors without redesign. |
-| Will a prototype be required?                                          | Yes. A design (throwaway) prototype, Deliverable 08, is used to confirm the screens with Alex before setup.        |
+| Will a prototype be required?                                          | Yes. A design (throwaway) prototype, Deliverable 08, is used to confirm the screens with Walter before setup.        |
 
 **Legal feasibility:** Student names, emails and meeting notes are personal information under Saskatchewan's privacy law for public institutions (FOIP). Options B and C keep data inside college-approved systems. Option D would store student data with an outside vendor, possibly outside Canada, and would need a privacy review and contract before use.
 
@@ -87,7 +87,7 @@ Option B returns about \$10,170 net over 3 years and pays back in about 8 months
 
 | TCO component                        | Option B                                                                     |
 |--------------------------------------|------------------------------------------------------------------------------|
-| People (IT staff and users)          | 56 h IT setup, 20 h IT a year; about 2 h of Alex's time for testing        |
+| People (IT staff and users)          | 56 h IT setup, 20 h IT a year; about 2 h of Walter's time for testing        |
 | Hardware and equipment               | \$0 (existing computers and phones)                                          |
 | Software                             | \$0 (Microsoft Bookings is in the existing licence)                          |
 | Formal and informal training         | \$360 (quick reference guide and class demo)                                 |
@@ -95,7 +95,7 @@ Option B returns about \$10,170 net over 3 years and pays back in about 8 months
 | Consulting and facility costs        | \$0                                                                          |
 | Cost of not developing or postponing | About \$5,250 a year in lost instructor time, plus continued missed meetings |
 
-**Intangible costs:** a short learning period for Alex and students, some students continuing to email at first, and reliance on IT Services' availability.
+**Intangible costs:** a short learning period for Walter and students, some students continuing to email at first, and reliance on IT Services' availability.
 
 **Cost-benefit comparison over 3 years**
 
@@ -132,7 +132,7 @@ Option B takes about 9 weeks, including the holiday break, so it can go live in 
 |------------------------------------------------------------|-----------------------------------------------------------------------------------------|
 | Can the team control the factors that affect the schedule? | Partly. Setup is in our control; IT Services approval is not, so it is requested first. |
 | Has management set a firm timetable?                       | Yes. The system must be live for the first week of the Winter 2027 term.                |
-| What conditions must be met?                               | Bookings enabled for Alex's account; prototype approved; testing passed.              |
+| What conditions must be met?                               | Bookings enabled for Walter's account; prototype approved; testing passed.              |
 | Would an accelerated schedule add risk?                    | Yes. Cutting the testing week could let booking errors reach students.                  |
 | Are project management techniques available?               | Yes. The timeline above, weekly check-ins and a task list track progress.               |
 
@@ -147,7 +147,7 @@ Option B takes about 9 weeks, including the holiday break, so it can go live in 
 | C. Custom app         | Medium      | Medium    | Low      | Low: 200 h will not fit before Winter 2027 | Low risk  | Not feasible now                      |
 | D. Commercial service | Medium      | High      | High     | High                                       | High risk | Not feasible without a privacy review |
 
-The team recommends that the program head approve Option B and that IT Services enable Microsoft Bookings for Alex's account. These findings feed the Preliminary Investigation Report (Deliverable 04).
+The team recommends that the program head approve Option B and that IT Services enable Microsoft Bookings for Walter's account. These findings feed the Preliminary Investigation Report (Deliverable 04).
 
 ---
 
