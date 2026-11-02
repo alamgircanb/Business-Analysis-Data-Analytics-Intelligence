@@ -1,0 +1,183 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",DejaVu Sans,Arial,sans-serif;background:#ccc;color:#1f2937}
+.screen{width:1280px;height:800px;background:#f4f6f9;margin:0 0 20px;display:flex;flex-direction:column;overflow:hidden;position:relative}
+.top{background:#0b3d6e;color:#fff;height:64px;display:flex;align-items:center;padding:0 28px;gap:28px}
+.brand{font-weight:700;font-size:20px;display:flex;align-items:center;gap:10px}
+.logo{width:34px;height:34px;border-radius:8px;background:#fff;color:#0b3d6e;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+.nav{display:flex;gap:6px;margin-left:24px}
+.nav a{color:#cfe0f3;text-decoration:none;padding:8px 14px;border-radius:6px;font-size:15px}
+.nav a.on{background:#fff;color:#0b3d6e;font-weight:600}
+.user{margin-left:auto;font-size:14px;display:flex;align-items:center;gap:10px}
+.av{width:32px;height:32px;border-radius:50%;background:#f3b33d;color:#0b3d6e;display:flex;align-items:center;justify-content:center;font-weight:700}
+.tag{position:absolute;right:16px;bottom:12px;font-size:12px;color:#6b7280}
+.main{padding:24px 28px;flex:1;display:flex;gap:24px}
+h1{font-size:24px;margin-bottom:4px}
+.sub{color:#6b7280;font-size:14px;margin-bottom:18px}
+.card{background:#fff;border:1px solid #dde3ea;border-radius:10px;padding:20px}
+.btn{display:inline-block;white-space:nowrap;padding:10px 18px;border-radius:7px;font-size:15px;font-weight:600;border:1px solid #0b3d6e}
+.pri{background:#0b3d6e;color:#fff}.sec{background:#fff;color:#0b3d6e}.dan{background:#fff;color:#b42318;border-color:#b42318}
+.dim{opacity:.45}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th{text-align:left;color:#6b7280;font-weight:600;padding:10px;border-bottom:1px solid #e5e7eb;font-size:13px}
+td{padding:12px 10px;border-bottom:1px solid #eef1f4}
+.pill{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600}
+.p-on{background:#e3f1e7;color:#1e7a3a}.p-grp{background:#e8eefb;color:#2b4fa8}.p-ind{background:#f1ece2;color:#8a5a00}.p-ns{background:#fde8e7;color:#b42318}.p-held{background:#e3f1e7;color:#1e7a3a}
+label{display:block;font-size:13px;font-weight:600;margin:14px 0 6px}
+.inp{border:1px solid #c8d0da;border-radius:7px;padding:10px 12px;font-size:14px;background:#fff;color:#1f2937}
+.radio{display:flex;gap:10px}
+.radio div{border:1px solid #c8d0da;border-radius:7px;padding:10px 14px;font-size:14px;background:#fff}
+.radio div.sel{border:2px solid #0b3d6e;background:#eef4fb;font-weight:600}
+.help{font-size:12px;color:#6b7280;margin-top:4px}
+/* calendar */
+.cal{display:grid;grid-template-columns:90px repeat(5,1fr);gap:6px;font-size:13px}
+.cal .h{font-weight:600;text-align:center;padding:8px 0;color:#374151}
+.cal .t{color:#6b7280;text-align:right;padding:9px 8px 0 0}
+.slot{height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12.5px}
+.open{background:#e6f0fb;border:1px solid #9cc0e8;color:#0b3d6e;font-weight:600}
+.booked{background:#eceef1;color:#9aa3ae;border:1px solid #e1e4e8}
+.none{background:transparent}
+.picked{background:#0b3d6e;color:#fff;font-weight:700;border:2px solid #f3b33d}
+.legend{display:flex;gap:18px;font-size:13px;color:#4b5563;margin-top:14px;align-items:center}
+.sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+.toast{background:#e3f1e7;border:1px solid #9fd3ae;color:#14532d;border-radius:8px;padding:14px 16px;font-size:14px}
+.stat{flex:1}.stat b{display:block;font-size:30px;color:#0b3d6e;margin-top:4px}.stat span{font-size:13px;color:#6b7280}
+.mcard{border:1px solid #dde3ea;border-radius:9px;padding:14px 16px;margin-bottom:10px;background:#fff;display:flex;align-items:center;gap:16px}
+.mcard .tm{font-weight:700;width:90px;color:#0b3d6e}
+.mcard.sel{border:2px solid #0b3d6e;background:#f5f9fe}
+.day{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid #eef1f4;font-size:14px}
+.day .chk{width:20px;height:20px;border-radius:4px;border:1px solid #9aa3ae;display:flex;align-items:center;justify-content:center;font-size:13px}
+.day .chk.on{background:#0b3d6e;border-color:#0b3d6e;color:#fff}
+textarea.inp{width:100%;height:150px;resize:none;font-family:inherit;line-height:1.5}
+</style></head><body>
+
+<!-- S1 -->
+<div class="screen" id="s1">
+<div class="top"><div class="brand"><div class="logo">CB</div>Consultation Booking</div>
+<div class="nav"><a class="on">Book a meeting</a><a>My bookings</a><a>Help</a></div>
+<div class="user">Priya Singh · Student <div class="av">PS</div></div></div>
+<div class="main" style="flex-direction:column">
+<div style="display:flex;align-items:flex-end"><div><h1>Book a consultation with Alex Morgan</h1><div class="sub">Instructor, BIS · Choose an open slot below. Office hours: Tuesday and Thursday, 1–3 pm.</div></div>
+<div style="margin-left:auto;display:flex;gap:8px;align-items:center;margin-bottom:18px"><span class="btn sec">&lt;</span><span style="font-weight:600;padding:0 10px">Week of Jan 11, 2027</span><span class="btn sec">&gt;</span></div></div>
+<div class="card" style="flex:1">
+<div style="display:flex;gap:10px;margin-bottom:14px;font-size:14px;align-items:center"><b>Meeting type:</b><div class="radio"><div class="sel">All</div><div>Individual (15 min)</div><div>Group (30 min)</div></div></div>
+<div class="cal">
+<div></div><div class="h">Mon Jan 11</div><div class="h">Tue Jan 12</div><div class="h">Wed Jan 13</div><div class="h">Thu Jan 14</div><div class="h">Fri Jan 15</div>
+<div class="t">1:00 pm</div><div class="slot none"></div><div class="slot open">Open</div><div class="slot none"></div><div class="slot open">Open</div><div class="slot none"></div>
+<div class="t">1:15 pm</div><div class="slot none"></div><div class="slot booked">Booked</div><div class="slot none"></div><div class="slot booked">Booked</div><div class="slot none"></div>
+<div class="t">1:30 pm</div><div class="slot none"></div><div class="slot picked">1:30 pm ✓ Selected</div><div class="slot none"></div><div class="slot open">Open</div><div class="slot none"></div>
+<div class="t">1:45 pm</div><div class="slot none"></div><div class="slot picked">Group, 30 min</div><div class="slot none"></div><div class="slot open">Open</div><div class="slot none"></div>
+<div class="t">2:00 pm</div><div class="slot none"></div><div class="slot open">Open</div><div class="slot none"></div><div class="slot booked">Booked</div><div class="slot none"></div>
+<div class="t">2:15 pm</div><div class="slot none"></div><div class="slot booked">Booked</div><div class="slot none"></div><div class="slot open">Open</div><div class="slot none"></div>
+<div class="t">2:30 pm</div><div class="slot none"></div><div class="slot booked">Booked</div><div class="slot none"></div><div class="slot open">Open</div><div class="slot none"></div>
+<div class="t">2:45 pm</div><div class="slot none"></div><div class="slot booked">Booked</div><div class="slot none"></div><div class="slot booked">Booked</div><div class="slot none"></div>
+</div>
+<div class="legend"><span><span class="sw" style="background:#e6f0fb;border:1px solid #9cc0e8"></span>Open</span><span><span class="sw" style="background:#0b3d6e"></span>Your selection</span><span><span class="sw" style="background:#eceef1"></span>Booked or unavailable</span>
+<span style="margin-left:auto"><span class="btn pri">Book this slot →</span></span></div>
+</div></div><div class="tag">S1 Booking calendar · Prototype (non-functional)</div></div>
+
+<!-- S2 -->
+<div class="screen" id="s2">
+<div class="top"><div class="brand"><div class="logo">CB</div>Consultation Booking</div>
+<div class="nav"><a class="on">Book a meeting</a><a>My bookings</a><a>Help</a></div>
+<div class="user">Priya Singh · Student <div class="av">PS</div></div></div>
+<div class="main">
+<div style="flex:1.3"><h1>Booking details</h1><div class="sub">Step 2 of 2 · Check the details and confirm.</div>
+<div class="card">
+<div style="display:flex;gap:30px;font-size:14px;padding-bottom:6px;border-bottom:1px solid #eef1f4"><div><span style="color:#6b7280">Date</span><br><b>Tuesday, Jan 12, 2027</b></div><div><span style="color:#6b7280">Time</span><br><b>1:30 – 2:00 pm</b></div><div><span style="color:#6b7280">With</span><br><b>Alex Morgan</b></div><div style="margin-left:auto"><span class="btn sec" style="padding:6px 12px;font-size:13px">Change slot</span></div></div>
+<label>Meeting type *</label><div class="radio"><div>Individual (15 min)</div><div class="sel">Group (30 min)</div></div>
+<label>Group name *</label><div class="inp" style="width:340px">Team Falcon – Systems Analysis and Design</div>
+<label>Location *</label><div class="radio"><div>In person (Room 2.114)</div><div class="sel">Online (Teams)</div></div>
+<label>Topic *</label><div class="inp" style="width:100%">the case study – feedback on our requirements document</div><div class="help">52 / 200 characters</div>
+<div style="margin-top:22px;display:flex;gap:10px"><span class="btn pri">Confirm booking</span><span class="btn sec">Back</span></div>
+</div></div>
+<div style="flex:1;padding-top:70px">
+<div class="toast"><b>✓ Booking confirmed</b><br>Your group meeting is booked for Tue, Jan 12 at 1:30 pm. A confirmation email with the Teams link has been sent to priya.singh@college.example.</div>
+<div class="card" style="margin-top:16px;font-size:14px;line-height:1.7"><b>What happens next</b><br>• Reminder email 24 hours before<br>• Join with the <b>Join Teams meeting</b> link<br>• Change or cancel up to 2 hours before in <b>My bookings</b></div>
+<div class="help" style="margin-top:10px">Shown after "Confirm booking" is selected.</div>
+</div></div><div class="tag">S2 Booking form and confirmation · Prototype (non-functional)</div></div>
+
+<!-- S3 -->
+<div class="screen" id="s3">
+<div class="top"><div class="brand"><div class="logo">CB</div>Consultation Booking</div>
+<div class="nav"><a>Book a meeting</a><a class="on">My bookings</a><a>Help</a></div>
+<div class="user">Priya Singh · Student <div class="av">PS</div></div></div>
+<div class="main" style="flex-direction:column"><h1>My bookings</h1><div class="sub">You can reschedule or cancel up to 2 hours before a meeting.</div>
+<div class="card"><table><tr><th>Date and time</th><th>Type</th><th>Topic</th><th>Location</th><th>Actions</th></tr>
+<tr><td><b>Tue, Jan 12 · 1:30 pm</b></td><td><span class="pill p-grp">Group · 30 min</span></td><td>the case study – feedback on our requirements</td><td>Teams</td><td><span class="btn sec" style="padding:6px 12px;font-size:13px">Reschedule</span> <span class="btn dan" style="padding:6px 12px;font-size:13px">Cancel booking</span></td></tr>
+<tr><td><b>Thu, Jan 21 · 2:15 pm</b></td><td><span class="pill p-ind">Individual · 15 min</span></td><td>Question about midterm topics</td><td>Room 2.114</td><td><span class="btn sec" style="padding:6px 12px;font-size:13px">Reschedule</span> <span class="btn dan" style="padding:6px 12px;font-size:13px">Cancel booking</span></td></tr>
+
+</table></div>
+<div class="card" style="margin-top:18px;display:flex;align-items:center;gap:16px;border-color:#f3b33d;background:#fffaf0;width:760px"><div style="font-size:26px">⚠</div><div style="font-size:14px"><b>Cancel this meeting?</b><br>Tue, Jan 12 at 1:30 pm will be released for other students. Alex will be notified.</div><div style="margin-left:auto;display:flex;gap:8px"><span class="btn dan">Yes, cancel</span><span class="btn sec">Keep it</span></div></div>
+<div class="help" style="margin-top:6px">Confirmation shown when "Cancel booking" is selected.</div>
+</div><div class="tag">S3 My bookings · Prototype (non-functional)</div></div>
+
+<!-- S4 -->
+<div class="screen" id="s4">
+<div class="top"><div class="brand"><div class="logo">CB</div>Consultation Booking</div>
+<div class="nav"><a class="on">Dashboard</a><a>Availability</a><a>Notes and history</a><a>Reports</a></div>
+<div class="user">Alex Morgan · Instructor <div class="av">AM</div></div></div>
+<div class="main" style="flex-direction:column">
+<h1>Good afternoon, Alex</h1><div class="sub">Tuesday, January 12, 2027 · Meetings sync to your Outlook calendar.</div>
+<div style="display:flex;gap:16px;margin-bottom:18px">
+<div class="card stat"><span>Meetings today</span><b>5</b></div><div class="card stat"><span>This week</span><b>8</b></div><div class="card stat"><span>Open slots left this week</span><b>7</b></div><div class="card stat"><span>No-shows this month</span><b>1</b></div></div>
+<div style="display:flex;gap:20px;flex:1">
+<div style="flex:2"><div style="font-weight:700;margin-bottom:10px">Today</div>
+<div class="mcard"><div class="tm">1:15 pm</div><div style="flex:1"><b>Daniel Okafor</b> · Lab 4 marking question</div><span class="pill p-ind">Individual</span><span style="font-size:13px;color:#6b7280;width:80px">Room 2.114</span><span class="pill p-held">Held</span></div>
+<div class="mcard sel"><div class="tm">1:30 pm</div><div style="flex:1"><b>Team Falcon</b> · the case study feedback</div><span class="pill p-grp">Group</span><span style="font-size:13px;color:#2b4fa8;width:80px;font-weight:600">Join Teams</span><span class="btn sec" style="padding:5px 10px;font-size:12px">Open notes</span></div>
+<div class="mcard"><div class="tm">2:15 pm</div><div style="flex:1"><b>Mei Chen</b> · Career advice – BA roles</div><span class="pill p-ind">Individual</span><span style="font-size:13px;color:#6b7280;width:80px">Room 2.114</span><span class="btn sec" style="padding:5px 10px;font-size:12px">Open notes</span></div>
+<div class="mcard"><div class="tm">2:30 pm</div><div style="flex:1"><b>Arjun Patel</b> · Midterm review</div><span class="pill p-ind">Individual</span><span style="font-size:13px;color:#6b7280;width:80px">Room 2.114</span><span class="btn sec" style="padding:5px 10px;font-size:12px">Open notes</span></div>
+<div class="mcard"><div class="tm">2:45 pm</div><div style="flex:1"><b>Sara Lopez</b> · Help with SQL lab</div><span class="pill p-ind">Individual</span><span style="font-size:13px;color:#2b4fa8;width:80px;font-weight:600">Join Teams</span><span class="btn sec" style="padding:5px 10px;font-size:12px">Open notes</span></div>
+</div>
+<div style="flex:1"><div style="font-weight:700;margin-bottom:10px">Rest of the week</div>
+<div class="card" style="font-size:14px;line-height:2"><b>Wed Jan 13</b> · no office hours<br><b>Thu Jan 14</b> · 3 meetings, 5 open slots<br><b>Fri Jan 15</b> · no office hours<br><span style="color:#6b7280;font-size:13px">Next week: 4 meetings booked so far</span><div style="margin-top:12px"><span class="btn sec">Edit availability</span></div></div></div>
+</div></div><div class="tag">S4 Instructor dashboard · Prototype (non-functional)</div></div>
+
+<!-- S5 -->
+<div class="screen" id="s5">
+<div class="top"><div class="brand"><div class="logo">CB</div>Consultation Booking</div>
+<div class="nav"><a>Dashboard</a><a class="on">Availability</a><a>Notes and history</a><a>Reports</a></div>
+<div class="user">Alex Morgan · Instructor <div class="av">AM</div></div></div>
+<div class="main">
+<div style="flex:1.3"><h1>Availability settings</h1><div class="sub">Students can only book inside these hours. Changes show immediately.</div>
+<div class="card"><div style="font-weight:700;margin-bottom:6px">Office hours</div>
+<div class="day"><div class="chk">&nbsp;</div><span style="width:110px">Monday</span><span style="color:#9aa3ae">Not available</span></div>
+<div class="day"><div class="chk on">✓</div><span style="width:110px"><b>Tuesday</b></span><div class="inp" style="padding:6px 10px">1:00 pm</div> to <div class="inp" style="padding:6px 10px">3:00 pm</div><span style="color:#2b4fa8;font-size:13px;margin-left:8px">+ Add time range</span></div>
+<div class="day"><div class="chk">&nbsp;</div><span style="width:110px">Wednesday</span><span style="color:#9aa3ae">Not available</span></div>
+<div class="day"><div class="chk on">✓</div><span style="width:110px"><b>Thursday</b></span><div class="inp" style="padding:6px 10px">1:00 pm</div> to <div class="inp" style="padding:6px 10px">3:00 pm</div><span style="color:#2b4fa8;font-size:13px;margin-left:8px">+ Add time range</span></div>
+<div class="day" style="border:none"><div class="chk">&nbsp;</div><span style="width:110px">Friday</span><span style="color:#9aa3ae">Not available</span></div>
+<div style="font-weight:700;margin:16px 0 4px">Slot length</div>
+<div style="display:flex;gap:30px"><div><label style="margin-top:6px">Individual meetings</label><div class="inp" style="width:160px">15 minutes ▾</div></div><div><label style="margin-top:6px">Group meetings</label><div class="inp" style="width:160px">30 minutes ▾</div></div><div><label style="margin-top:6px">Cancel cut-off</label><div class="inp" style="width:160px">2 hours before ▾</div></div></div>
+</div></div>
+<div style="flex:1;padding-top:70px"><div class="card"><div style="font-weight:700;margin-bottom:10px">Blocked dates</div>
+<table><tr><th>Date</th><th>Reason</th><th></th></tr><tr><td>Feb 16–20, 2027</td><td>Reading week</td><td style="color:#b42318">Remove</td></tr><tr><td>Mar 4, 2027</td><td>Conference</td><td style="color:#b42318">Remove</td></tr></table>
+<div style="margin-top:12px"><span class="btn sec">+ Block a date</span></div></div>
+<div style="margin-top:22px;display:flex;gap:10px;justify-content:flex-end"><span class="btn sec">Cancel</span><span class="btn pri">Save</span></div></div>
+</div><div class="tag">S5 Availability settings · Prototype (non-functional)</div></div>
+
+<!-- S6 -->
+<div class="screen" id="s6">
+<div class="top"><div class="brand"><div class="logo">CB</div>Consultation Booking</div>
+<div class="nav"><a>Dashboard</a><a>Availability</a><a class="on">Notes and history</a><a>Reports</a></div>
+<div class="user">Alex Morgan · Instructor <div class="av">AM</div></div></div>
+<div class="main">
+<div style="flex:1"><h1>Notes and history</h1><div class="sub">Search past meetings or filter by group. Nov–Dec entries were imported from your Excel notes.</div>
+<div style="display:flex;gap:8px;margin-bottom:12px"><div class="inp" style="flex:1">🔍 Search notes, names, topics…</div><div class="inp" style="width:170px">Team Falcon ▾</div></div>
+<div class="card" style="padding:8px 14px"><table><tr><th>Date</th><th>Topic</th><th>Status</th></tr>
+<tr style="background:#f5f9fe"><td><b>Jan 12</b></td><td><b>the case study feedback</b></td><td><span class="pill p-held">Held</span></td></tr>
+<tr><td>Dec 3</td><td>Interview with instructor</td><td><span class="pill p-held">Held</span></td></tr>
+<tr><td>Nov 19</td><td>Project scope check</td><td><span class="pill p-held">Held</span></td></tr>
+<tr><td>Nov 5</td><td>Group formation</td><td><span class="pill p-ns">No-show</span></td></tr></table></div></div>
+<div style="flex:1.3"><div class="card" style="margin-top:44px">
+<div style="display:flex;align-items:center"><div><div style="font-size:18px;font-weight:700">Team Falcon · the case study feedback</div><div class="sub" style="margin:2px 0 0">Tue, Jan 12, 2027 · 1:30–2:00 pm · Teams · 4 members</div></div><span class="pill p-grp" style="margin-left:auto">Group</span></div>
+<label>Private notes (only you can see these)</label>
+<textarea class="inp">Requirements doc is strong; traceability table well done.
+- Add acceptance criteria to NFR-06 and NFR-08
+- Clarify cancel cut-off with stakeholder
+Follow up: check revised version before Jan 26.</textarea>
+<label>Meeting status</label><div class="radio"><div class="sel">Held</div><div>Cancelled</div><div>No-show</div></div>
+<div style="margin-top:20px;display:flex;gap:10px"><span class="btn pri">Save notes</span><span class="btn sec">Close</span><span style="margin-left:auto;font-size:13px;color:#6b7280;align-self:center">Last saved 2:02 pm</span></div>
+</div></div>
+</div><div class="tag">S6 Meeting notes and history · Prototype (non-functional)</div></div>
+
+</body></html>
