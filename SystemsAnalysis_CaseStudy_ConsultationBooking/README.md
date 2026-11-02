@@ -4,7 +4,7 @@
 
 **Author:** Md Alamgir Hossain · October 2026
 
-> **About this case study.** It was developed for a group project in a Business Information Systems diploma (Systems Analysis and Design). The stakeholder, **Alex Morgan**, and all students, interview answers and figures are **fictional and illustrative**. The structure, methods and templates are real and reusable.
+> **About this case study.** It was developed for a group project in a Business Information Systems diploma (Systems Analysis and Design). The stakeholder, **Alex Morgan**, and all interview answers and figures are **fictional and illustrative**. The structure, methods and templates are real and reusable.
 
 ---
 

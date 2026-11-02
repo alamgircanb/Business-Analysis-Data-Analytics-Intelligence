@@ -112,7 +112,7 @@ tr.cur{background:#eef4fb}
       <a href="#notes" data-s="notes">Notes and history</a>
       <a href="#reports" data-s="reports">Reports</a>
     </nav>
-    <div class="user" id="userBox">Priya Singh · Student <div class="av">PS</div></div>
+    <div class="user" id="userBox">Anish · Student <div class="av">AN</div></div>
   </div>
 
   <!-- S1 BOOKING CALENDAR -->
@@ -197,7 +197,7 @@ tr.cur{background:#eef4fb}
   <section class="screen" id="notes">
     <div class="row">
       <div style="flex:1;min-width:300px"><h1>Notes and history</h1><div class="sub">Search past meetings or filter by group. Nov–Dec entries were imported from Excel.</div>
-        <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap"><input class="inp" id="search" placeholder="🔍 Search notes, names, topics…" style="flex:1;min-width:160px" oninput="renderHistory()"><select class="inp" id="grpFilter" onchange="renderHistory()"><option value="">All students and groups</option><option selected>Team Falcon</option><option>Team Orion</option><option>Daniel Okafor</option><option>Mei Chen</option></select></div>
+        <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap"><input class="inp" id="search" placeholder="🔍 Search notes, names, topics…" style="flex:1;min-width:160px" oninput="renderHistory()"><select class="inp" id="grpFilter" onchange="renderHistory()"><option value="">All students and groups</option><option selected>Team Falcon</option><option>Team Orion</option><option>Aniruddh</option><option>Mei Chen</option></select></div>
         <div class="card" style="padding:8px 14px"><table><thead><tr><th>Date</th><th>With</th><th>Topic</th><th>Status</th></tr></thead><tbody id="hist"></tbody></table></div>
       </div>
       <div style="flex:1.3;min-width:320px"><div class="card" style="margin-top:44px">
@@ -228,7 +228,7 @@ tr.cur{background:#eef4fb}
     <div style="margin-top:16px;display:flex;gap:10px"><button class="btn sec" onclick="snack('Report exported to Excel (demo).')">Export to Excel</button><button class="btn sec" onclick="snack('Report exported to PDF (demo).')">Export to PDF</button></div>
   </section>
 
-  <div class="foot">Design (throwaway) prototype for a systems analysis case study · All people and data are fictional · Screens S1–S7</div>
+  <div class="foot">Design (throwaway) prototype for a systems analysis case study · The stakeholder and all data are fictional · Screens S1–S7</div>
 </div>
 
 <!-- cancel confirm -->
@@ -252,7 +252,7 @@ function init(){
   state={role:'student',wk:0,pick:null,filter:'all',mType:'grp',mLoc:'teams',
     booked:{'1-1':1,'1-4':0,'1-5':1,'1-6':1,'1-7':1,'3-1':1,'3-4':1,'3-7':1},
     mine:[{id:'b2',when:'Thu, Jan 21 · 2:15 pm',type:'ind',topic:'Question about midterm topics',loc:'Room 2.114'}],
-    today:[{t:'1:15 pm',who:'Daniel Okafor',topic:'Lab 4 marking question',type:'ind',loc:'Room 2.114',status:'Held'},
+    today:[{t:'1:15 pm',who:'Aniruddh',topic:'Lab 4 marking question',type:'ind',loc:'Room 2.114',status:'Held'},
       {t:'2:15 pm',who:'Mei Chen',topic:'Career advice – BA roles',type:'ind',loc:'Room 2.114',status:''},
       {t:'2:30 pm',who:'Arjun Patel',topic:'Midterm review',type:'ind',loc:'Room 2.114',status:''},
       {t:'2:45 pm',who:'Sara Lopez',topic:'Help with SQL lab',type:'ind',loc:'Teams',status:''}],
@@ -262,7 +262,7 @@ function init(){
       {id:'h3',date:'Nov 19',who:'Team Falcon',topic:'Project scope check',status:'Held',type:'grp',time:'2:00–2:30 pm · Room 2.114',notes:'Scope agreed: one instructor, self-booking, reminders, notes. Other instructors out of scope for now.'},
       {id:'h4',date:'Nov 5',who:'Team Falcon',topic:'Group formation',status:'No-show',type:'grp',time:'1:30–2:00 pm · Room 2.114',notes:'Group did not attend. Sent a reminder about the booking system.'},
       {id:'h5',date:'Dec 10',who:'Team Orion',topic:'Interview scheduling',status:'Held',type:'grp',time:'2:00–2:30 pm · Teams',notes:'Agreed interview date; shared question list.'},
-      {id:'h6',date:'Jan 12',who:'Daniel Okafor',topic:'Lab 4 marking question',status:'Held',type:'ind',time:'1:15–1:30 pm · Room 2.114',notes:'Re-marked question 3; grade updated in Brightspace.'},
+      {id:'h6',date:'Jan 12',who:'Aniruddh',topic:'Lab 4 marking question',status:'Held',type:'ind',time:'1:15–1:30 pm · Room 2.114',notes:'Re-marked question 3; grade updated in Brightspace.'},
       {id:'h7',date:'Dec 8',who:'Mei Chen',topic:'Course selection',status:'No-show',type:'ind',time:'1:45–2:00 pm · Room 2.114',notes:''}],
     cur:'h1',
     days:[{d:'Monday',on:false},{d:'Tuesday',on:true},{d:'Wednesday',on:false},{d:'Thursday',on:true},{d:'Friday',on:false}],
@@ -281,7 +281,7 @@ function route(){
   state.role=INSTR.includes(h)?'instructor':'student';
   $('asStudent').classList.toggle('on',state.role==='student');$('asInstructor').classList.toggle('on',state.role==='instructor');
   $('navStudent').classList.toggle('hidden',state.role!=='student');$('navInstructor').classList.toggle('hidden',state.role!=='instructor');
-  $('userBox').innerHTML=state.role==='student'?'Priya Singh · Student <div class="av">PS</div>':'Alex Morgan · Instructor <div class="av">AM</div>';
+  $('userBox').innerHTML=state.role==='student'?'Anish · Student <div class="av">AN</div>':'Alex Morgan · Instructor <div class="av">AM</div>';
   document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('show',s.id===h));
   document.querySelectorAll('.nav a[data-s]').forEach(a=>a.classList.toggle('on',a.dataset.s===h||(h==='form'&&a.dataset.s==='book')));
   ({book:renderCal,form:renderForm,mybookings:renderMine,dashboard:renderToday,availability:renderAvail,notes:()=>{renderHistory();renderNote()},reports:renderReports}[h]||(()=>{}))();
@@ -333,8 +333,8 @@ function confirmBooking(){
   const f=fmtPick(),p=state.pick;
   if(p.wk===0){state.booked[slotKey(p.d,p.t)]=1;if(state.mType==='grp')state.booked[slotKey(p.d,p.t+1)]=1;}
   state.mine.unshift({id:'b'+Date.now(),when:f.short,type:state.mType,topic,loc:state.mLoc==='teams'?'Teams':'Room 2.114'});
-  if(p.wk===0&&p.d===1)state.today.push({t:TIMES[p.t],who:state.mType==='grp'?grp.split(' –')[0]:'Priya Singh',topic,type:state.mType,loc:state.mLoc==='teams'?'Teams':'Room 2.114',status:''});
-  $('okText').textContent=(state.mType==='grp'?'Your group meeting':'Your meeting')+' is booked for '+f.short+'. A confirmation email'+(state.mLoc==='teams'?' with the Teams link':'')+' has been sent to priya.singh@college.example.';
+  if(p.wk===0&&p.d===1)state.today.push({t:TIMES[p.t],who:state.mType==='grp'?grp.split(' –')[0]:'Anish',topic,type:state.mType,loc:state.mLoc==='teams'?'Teams':'Room 2.114',status:''});
+  $('okText').textContent=(state.mType==='grp'?'Your group meeting':'Your meeting')+' is booked for '+f.short+'. A confirmation email'+(state.mLoc==='teams'?' with the Teams link':'')+' has been sent to anish@college.example.';
   $('okToast').classList.remove('hidden');$('okNext').classList.remove('hidden');state.pick=null;
 }
 function renderMine(){

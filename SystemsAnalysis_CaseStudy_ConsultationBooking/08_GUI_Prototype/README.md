@@ -70,7 +70,7 @@ The clickable prototype is one file, [`prototype/index.html`](prototype/index.ht
 
 `source/before_email_booking.html` produces the “before” image the same way.
 
-*All names (stakeholder and students) are fictional.*
+*The stakeholder and all data are fictional. Student names are the project teammates’ first names.
 
 ---
 
