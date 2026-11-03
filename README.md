@@ -1,3 +1,9 @@
+## Featured: Systems Analysis & Design Case Study
+
+**[Instructor Consultation Booking System](SystemsAnalysis_CaseStudy_ConsultationBooking/README.md)** is an end-to-end business analysis case study. It covers the business case, feasibility study (TCO, ROI, payback), interviews and questionnaire, requirements engineering (MoSCoW, user stories, use cases, traceability), a GUI prototype, a user manual and a stakeholder presentation. **[▶ Try the clickable prototype](https://alamgircanb.github.io/Business-Analysis-Data-Analytics-Intelligence/SystemsAnalysis_CaseStudy_ConsultationBooking/08_GUI_Prototype/prototype/)**
+
+---
+
 This academic group project demonstrates an end-to-end retail sales business intelligence solution. We designed a SQL Server star-schema data warehouse, 
 developed an SSIS process to clean and transform CSV data, and created an interactive two-page Power BI dashboard. 
 The dashboard summarizes approximately $343.51K in sales and 750 units sold, with analysis by product, category, store, province, and date. 

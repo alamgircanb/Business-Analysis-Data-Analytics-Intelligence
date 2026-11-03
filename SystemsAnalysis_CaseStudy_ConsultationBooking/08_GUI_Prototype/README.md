@@ -2,6 +2,17 @@
 
 A **non-functional design (throwaway) prototype**: six screen images that show how the improved interface works. Their job is to confirm requirements with the stakeholder before the real system is configured. Each screen traces back to the requirements in [Deliverable 05](../05_Final_Requirements/README.md).
 
+## ▶ Try the clickable prototype
+
+**[Open the clickable prototype](https://alamgircanb.github.io/Business-Analysis-Data-Analytics-Intelligence/SystemsAnalysis_CaseStudy_ConsultationBooking/08_GUI_Prototype/prototype/)** (runs in your browser; nothing to install)
+
+Click through the real flows:
+
+- **Student:** pick an open slot → **Book this slot** → fill in the form (try leaving the topic empty to see validation) → **Confirm booking** → **My bookings** → **Cancel booking** (with confirmation).
+- **Instructor** (switch with *View as* at the top): dashboard → **Open notes** → write notes and set the status → **Save notes**; change office hours and blocked dates in **Availability**; see the **No-show report** in **Reports**.
+
+The demo data is illustrative and resets when you reload the page. Source: [`prototype/index.html`](prototype/index.html), a single HTML file.
+
 ## Before: the current process
 
 Booking happens through email threads and a paper sign-up sheet on the office door.
@@ -51,7 +62,7 @@ The screens follow the user interface guidelines from Chapter 8 of *Systems Anal
 
 ## Edit or regenerate the screens
 
-The screens are plain HTML and CSS, with no build tools needed:
+The clickable prototype is one file, [`prototype/index.html`](prototype/index.html), with plain HTML, CSS and JavaScript. Edit it and refresh your browser. The static screen images come from `source/`, which is also plain HTML and CSS with no build tools needed:
 
 1. Open [`source/screens.html`](source/screens.html) in any web browser to see all six screens on one page.
 2. Edit the text or styles in a code editor and refresh the browser.
@@ -59,7 +70,7 @@ The screens are plain HTML and CSS, with no build tools needed:
 
 `source/before_email_booking.html` produces the “before” image the same way.
 
-*All names (stakeholder and students) are fictional.*
+*Stakeholder: Walter Dvorak (course instructor). Student names are the project teammates’ first names. All booking data is illustrative.*
 
 ---
 

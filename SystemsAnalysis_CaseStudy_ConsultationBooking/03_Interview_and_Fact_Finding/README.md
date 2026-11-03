@@ -1,8 +1,8 @@
 # Deliverable 03 – Interview Documents: Instructor Consultation Booking System
 
-**Author:** Md Alamgir Hossain · October 2026 · *Illustrative case study: the stakeholder and all figures are fictional.*
+**Author:** Md Alamgir Hossain · October 2026 · *Illustrative case study: Walter Dvorak is the course instructor who acted as stakeholder. The interview answers and all figures here are illustrative examples prepared by the student team, not his actual statements.*
 
-The team gathered requirements with two fact-finding techniques: a 30-minute interview with Alex Morgan and a short student questionnaire. This deliverable holds the plan, questions, summary and evidence for both. (Illustrative answers.)
+The team gathered requirements with two fact-finding techniques: a 30-minute interview with Walter Dvorak and a short student questionnaire. This deliverable holds the plan, questions, summary and evidence for both. (Illustrative answers.)
 
 ## 1. Interview plan
 
@@ -10,16 +10,16 @@ The plan follows the textbook's interview steps (Chapter 4): decide whom to inte
 
 | Item           | Plan                                                                                                             |
 |----------------|------------------------------------------------------------------------------------------------------------------|
-| Interviewee    | Alex Morgan, Instructor BIS (alex.morgan@college.example)                                                        |
+| Interviewee    | Walter Dvorak, Instructor BIS                                                        |
 | Why him        | He is the system's requestor and main user, and he sees the booking problem every week                           |
-| Date and time  | During Systems Analysis and Design class time (date to be confirmed with Alex)                                                    |
+| Date and time  | During Systems Analysis and Design class time (date to be confirmed with Walter)                                                    |
 | Length         | 30 minutes maximum                                                                                               |
-| Location       | Alex's office or the classroom, main campus                                                                  |
+| Location       | Walter's office or the classroom, main campus                                                                  |
 | Interview type | Structured with follow-up probes: mostly open-ended questions, plus a few closed and range-of-response questions |
 
 **Objectives**
 
-1.  Understand Alex's responsibilities and the systems he uses.
+1.  Understand Walter's responsibilities and the systems he uses.
 
 2.  Document the current booking process and its problems.
 
@@ -71,22 +71,22 @@ The plan follows the textbook's interview steps (Chapter 4): decide whom to inte
 | Q14\* | How long should meeting records be kept, and should your Excel notes be moved into the new system?                | Closed            | Data retention and conversion                  |
 | Q15\* | When would you want it live, and when would switching be most disruptive?                                         | Open-ended        | Implementation timing                          |
 
-\* Ask Q13–Q15 if time allows; otherwise send them to Alex by email after the interview.
+\* Ask Q13–Q15 if time allows; otherwise send them to Walter by email after the interview.
 
-**Follow-up probes (use if time allows):** "Can you give an example?", "How often does that happen?", "What happens if a student misses a meeting?" Avoid leading questions (e.g., not "Wouldn't online booking be better?"), give Alex time to think, and summarize the key points at the end to confirm them.
+**Follow-up probes (use if time allows):** "Can you give an example?", "How often does that happen?", "What happens if a student misses a meeting?" Avoid leading questions (e.g., not "Wouldn't online booking be better?"), give Walter time to think, and summarize the key points at the end to confirm them.
 
 ## 3. Interview summary
 
-Alex confirmed that email booking is the core problem and asked for self-booking, reminders and private notes, all within the college's existing tools.
+Walter confirmed that email booking is the core problem and asked for self-booking, reminders and private notes, all within the college's existing tools.
 
 | Item         | Detail                                      |
 |--------------|---------------------------------------------|
-| Interviewee  | Alex Morgan, Instructor BIS            |
+| Interviewee  | Walter Dvorak, Instructor BIS            |
 | Date         | During Systems Analysis and Design class (to be filled in)     |
 | Duration     | 30 minutes                                  |
 | Interviewers | Project team (names to be filled in) |
 
-| \#  | Question                                       | Alex's answer (illustrative)                                                                                   |
+| \#  | Question                                       | Walter's answer (illustrative)                                                                                   |
 |-----|------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | Q1  | Main responsibilities                          | "Teaching, grading, advising, and supervising group projects across 4–5 sections."                        |
 | Q2  | Systems used daily                             | "Brightspace, Outlook, Teams, MindTap and my Excel sheets."                                               |
@@ -133,9 +133,9 @@ Thirty students answered a 5-question online questionnaire (Microsoft Forms, ill
 
 | Technique                    | How it applies here                                                                                                     |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| Document review              | Reviewed sample booking emails, the paper door sheet and Alex's Excel notes template                                  |
+| Document review              | Reviewed sample booking emails, the paper door sheet and Walter's Excel notes template                                  |
 | Observation                  | Could observe one office-hours session to see walk-ins and the door sheet in use                                        |
-| Sampling                     | The questionnaire used a stratified sample: students from each of Alex's sections                                     |
+| Sampling                     | The questionnaire used a stratified sample: students from each of Walter's sections                                     |
 | Research                     | Compared booking tools (Microsoft Bookings, commercial schedulers) for Deliverable 02                                   |
 | Interviews vs questionnaires | The interview gave depth from the main user; the questionnaire gave many students a quick, convenient way to give input |
 
@@ -145,7 +145,7 @@ Thirty students answered a 5-question online questionnaire (Microsoft Forms, ill
 
 > **Subject:** course case study – Request for a 30-minute interview
 >
-> Hello Prof. Morgan,
+> Hello Mr. Dvorak,
 >
 > Our group is working on course case study and would like to interview you about how you schedule consultations with students. The interview will take no more than 30 minutes and can be held during our class time. Could you let us know which class date works best for you?
 >
@@ -155,7 +155,7 @@ Thirty students answered a 5-question online questionnaire (Microsoft Forms, ill
 
 > **Subject:** Thank you – interview summary for your review
 >
-> Hello Prof. Morgan,
+> Hello Mr. Dvorak,
 >
 > Thank you for meeting with us today. We've attached a summary of your answers and the key findings. Could you please confirm they are accurate, or let us know of any corrections, by \[date\]?
 >
@@ -170,13 +170,13 @@ Thirty students answered a 5-question online questionnaire (Microsoft Forms, ill
 | What would we improve?   | Ask for real numbers (emails per week, no-show rate) earlier, and bring a sample screen to react to. |
 | Follow-up needed         | Confirm the 2-hour cancellation cut-off and whether walk-ins should be recorded.                     |
 
-**Possible bias (Chapter 4: evaluate the interview):** Alex is both the requestor and our instructor, so he may favour solutions that suit his own routine, and we may have avoided challenging his answers. The student questionnaire helps balance this.
+**Possible bias (Chapter 4: evaluate the interview):** Walter is both the requestor and our instructor, so he may favour solutions that suit his own routine, and we may have avoided challenging his answers. The student questionnaire helps balance this.
 
 **Interviewee sign-off**
 
 | Role             | Name                             | Signature | Date |
 |------------------|----------------------------------|-----------|------|
-| Interviewee      | Alex Morgan, Instructor BIS |           |      |
+| Interviewee      | Walter Dvorak, Instructor BIS |           |      |
 | Lead interviewer | Md Alamgir Hossain               |           |      |
 
 ---
